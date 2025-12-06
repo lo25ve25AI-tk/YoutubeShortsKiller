@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Killer",
+  "description": "Hides YouTube Shorts across desktop pages and redirects Shorts URLs away from the Shorts player.",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://youtube.com/*",
+        "*://m.youtube.com/*"
+      ],
+      "js": ["src/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
